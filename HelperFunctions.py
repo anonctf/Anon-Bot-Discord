@@ -1,5 +1,6 @@
 import discord
 
+# Output for !help
 HELP_DICT = {
     "!help": "Returns this message.",
     "!hello": "Returns Hello, <user>!",
@@ -7,6 +8,7 @@ HELP_DICT = {
     "!numfact": "Returns a fact about a number, use '!help numfact' for more info"
 }
 
+# Output for !help <command>
 CMD_DICT = {
     "!numfact <arg1> [arg2]": """
     <arg1> Options are listed below
@@ -16,6 +18,7 @@ CMD_DICT = {
         """
 }
 
+# Embeds the help message accordingly to the supplied arguments
 def HELP(cmd=''):
     if cmd == '':
         e = discord.Embed(title="Help Commands:", color=0x5ea340)

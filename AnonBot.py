@@ -6,6 +6,9 @@ import discord
 from discord.ext import commands
 from HelperFunctions import HELP
 
+# bot icon url
+bot_icon = "https://avatars1.githubusercontent.com/u/68417148?s=460&u=435dc029d21620348712b79f581121e6be4950ad&v=4"
+
 def main(bot):
     # Confirms successful bot login
     @bot.event
@@ -45,7 +48,7 @@ def main(bot):
 
         e = discord.Embed(title=res["safe_title"], description=res["alt"], color=0x58a8d6)
         e.set_image(url=res["img"])
-        e.set_author(name="Anon Bot", icon_url="https://avatars1.githubusercontent.com/u/68417148?s=460&u=435dc029d21620348712b79f581121e6be4950ad&v=4")
+        e.set_author(name="Anon Bot", icon_url=bot_icon)
         e.set_footer(text="Random comic from xkcd API!!")
         await ctx.channel.send(embed=e)
 
@@ -90,11 +93,14 @@ def main(bot):
         r = requests.get(url).text
 
         e = discord.Embed(title="Number Fact", description=r, color=0x48b8d9)
-        e.set_author(name="Anon Bot", icon_url="https://avatars1.githubusercontent.com/u/68417148?s=460&u=435dc029d21620348712b79f581121e6be4950ad&v=4")
+        e.set_author(name="Anon Bot", icon_url=bot_icon)
         await ctx.channel.send(embed=e)
 
 if __name__ == "__main__":
-    # Starts the bot
+    # Command Prefix
     bot = commands.Bot(command_prefix="!", help_command=None)
+
     main(bot)
+
+    # Starts the bot
     bot.run(os.getenv("TOKEN"))
