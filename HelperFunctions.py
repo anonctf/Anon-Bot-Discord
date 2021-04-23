@@ -1,11 +1,28 @@
 import discord
 
+# Quotes dictionary
+quotes = {
+    "anonbot": [
+        "*ahem* How can help you?",
+        "Very carefully, next question.",
+        "Try HARDER.",
+        "\\*Morpheus\\*: Red or Blue pill?",
+        "The Matrix is real.",
+        "I'm gonna make him an offer he can't refuse.",
+        "I’ll be back.",
+        "Frankly, my dear, I don't give a damn.",
+        "Why so serious?",
+        "Riddikulus.",
+    ]
+}
+
 # Output for !help
 HELP_DICT = {
     "!help": "Returns this message.",
     "!hello": "Returns Hello, <user>!",
     "!xkcd": "Returns a random xkcd comic from the official xkcd API",
-    "!numfact": "Returns a fact about a number, use '!help numfact' for more info"
+    "!numfact": "Returns a fact about a number, use '!help numfact' for more info",
+    "!ab": "Send random anon-bot quotes.",
 }
 
 # Output for !help <command>

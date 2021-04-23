@@ -4,7 +4,9 @@ import re
 import requests
 import discord
 from discord.ext import commands
+from keep_alive import keep_alive
 from HelperFunctions import HELP
+from HelperFunctions import quotes
 
 # bot icon url
 bot_icon = "https://avatars1.githubusercontent.com/u/68417148?s=460&u=435dc029d21620348712b79f581121e6be4950ad&v=4"
@@ -36,6 +38,17 @@ def main(bot):
     @bot.command(name='hello')
     async def hello(ctx):
         await ctx.author.send(f"Hello, {ctx.author.name}!")
+
+    #####################
+    # Random bot quotes #
+    #####################
+    @bot.command(name='ab')
+    async def ab(ctx):
+        bot_quotes = quotes['anonbot']
+        quote = bot_quotes[random.randint(0, len(bot_quotes) - 1)]
+        response = discord.Embed(title=quote, color=0xbf0f0f)
+        response.set_author(name="Anon-Bot", icon_url="https://youthful-minsky-60409b.netlify.app/images/anonymous.png")
+        await ctx.channel.send(embed=response)
 
     ##############
     # xkcd comic #
@@ -101,6 +114,7 @@ if __name__ == "__main__":
     bot = commands.Bot(command_prefix="!", help_command=None)
 
     main(bot)
+    keep_alive()
 
     # Starts the bot
     bot.run(os.getenv("TOKEN"))
