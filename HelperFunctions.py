@@ -10,7 +10,7 @@ quotes = {
         "The Matrix is real.",
         "I'm gonna make him an offer he can't refuse.",
         "I’ll be back.",
-        "Avada kedavra."
+        "Avada kedavra.",
         "Frankly, my dear, I don't give a damn.",
         "Why so serious?",
         "Riddikulus.",
