@@ -10,9 +10,12 @@ quotes = {
         "The Matrix is real.",
         "I'm gonna make him an offer he can't refuse.",
         "I’ll be back.",
+        "Avada kedavra."
         "Frankly, my dear, I don't give a damn.",
         "Why so serious?",
         "Riddikulus.",
+        ":regional_indicator_b: :regional_indicator_u: :regional_indicator_z: :regional_indicator_z: :regional_indicator_i: :regional_indicator_n: :regional_indicator_g: :regional_indicator_a:",
+        "What's up buttercup?",
     ]
 }
 
